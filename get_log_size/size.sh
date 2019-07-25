@@ -1,0 +1,2 @@
+docker ps |awk '{if (NR>1){print $1}}' |xargs docker inspect --format='{{.LogPath}}' | xargs ls -lh | awk '{printf $5 " "; system ("echo " $9 " | sed " "'\''"  "s/\\/[a-z0-9]*\\/[a-z0-9]*\\/[a-z0-9]*\\/[a-z0-9]*\\/[a-z0-9]*\\/\\([a-z0-9\\-][a-z0-9\\-][a-z0-9\\-][a-z0-9\\-][a-z0-9\\-][a-z0-9\\-][a-z0-9\\-][a-z0-9\\-]\\)[a-z0-9\\-]*.log/\\1/g" "'\''" "| xargs docker inspect --format=" "'\''" "{{.Name}}" "'\''"  )}'
+
