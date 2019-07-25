@@ -8,7 +8,6 @@ Usage:
 For example
 ```seal.sh dev_201907```
 
-The script will iterate all `docker-compose.yml`, starts from current directory, and tag all images whose repo is the interl repo with the given `tag` argument and push.
+The script will iterate all `docker-compose.yml`, starts from current directory, to each sub-directories recursively, and tag all images whose repo is the interl repo with the given `tag` argument and push.
 
-
-
+So users can get a brunch of images with same tag.
