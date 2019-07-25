@@ -1,7 +1,6 @@
 Run `tcpdump` to grab the packages for later analysis (Wireshark, Fiddle)
 
-Requirement:
-docker, tcpdump, nsenter
+Requirement: `docker`, `tcpdump`, `nsenter`
 
 Usage:
 
