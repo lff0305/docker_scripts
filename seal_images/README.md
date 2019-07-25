@@ -4,8 +4,11 @@ Users should change the line 19 to change the repo host name to your own repo ho
 
 Usage:
 ```seal.sh <tag>```
+
 For example
 ```seal.sh dev_201907```
+
+The script will iterate all `docker-compose.yml`, starts from current directory, and tag all images whose repo is the interl repo with the given `tag` argument and push.
 
 
 
