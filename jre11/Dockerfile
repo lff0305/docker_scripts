@@ -38,7 +38,7 @@ RUN apk add --no-cache tzdata --virtual .build-deps curl binutils zstd \
 ADD ./openjdk /opt/java/openjdk
 
 RUN apk update \
-      && apk add curl bash wget unzip busybox-extras \
+      && apk add curl sudo bash wget unzip busybox-extras \
       && addgroup -S appgroup \
       && adduser -S app -G appgroup \
       && mkdir /logs \
